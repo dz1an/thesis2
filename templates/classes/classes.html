@@ -1,0 +1,239 @@
+<!-- smartscore/templates/classes.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css" />
+
+    <!-- Include your styles.css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'smartscore/styles.css' %}">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    
+
+    
+        .content {
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 20px;
+        }
+    
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #dee2e6;
+            margin-top: auto;
+        }
+    
+        footer nav {
+            margin-bottom: 10px;
+        }
+    
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+    
+        footer a:hover {
+            color: #99c2ff;
+        }
+    
+        .social-icons {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+    
+        .social-icons a:hover {
+            color: #99c2ff;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .class-card {
+            margin-bottom: 20px;
+        }
+
+        .class-options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .class-option {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+    
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            header {
+                padding: 50px 0;
+            }
+    
+            header h1 {
+                font-size: 2em;
+            }
+    
+            .feature-box {
+                padding: 10px;
+            }
+    
+            footer a {
+                margin: 0 10px;
+            }
+    
+            .social-icons {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Include the contents of navbar.html -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <header class="container">
+      
+    </header>
+
+    <!-- Content of classes.html -->
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content" id="learn-more">
+            <h2>Search Classes</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+
+            <h2>Delete and Archive</h2>
+            <button class="btn btn-danger">Delete</button>
+            <button class="btn btn-warning">Archive</button>
+
+            <h2>Class List</h2>
+            <div class="row">
+                <!-- Grade 7 Sections -->
+                <div class="col-md-4">
+                    <div class="card class-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grade 7 - Section A</h5>
+                            <p class="card-text">Student Count: 30</p>
+                            <ul class="class-options">
+                                <li class="class-option"><a href="#">Edit</a></li>
+                                <li class="class-option"><a href="#">See Report</a></li>
+                                <li class="class-option"><a href="#">Roster</a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card class-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grade 7 - Section A</h5>
+                            <p class="card-text">Student Count: 30</p>
+                            <ul class="class-options">
+                                <li class="class-option"><a href="#">Edit</a></li>
+                                <li class="class-option"><a href="#">See Report</a></li>
+                                <li class="class-option"><a href="#">Roster</a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card class-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grade 7 - Section A</h5>
+                            <p class="card-text">Student Count: 30</p>
+                            <ul class="class-options">
+                                <li class="class-option"><a href="#">Edit</a></li>
+                                <li class="class-option"><a href="#">See Report</a></li>
+                                <li class="class-option"><a href="#">Roster</a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card class-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grade 7 - Section A</h5>
+                            <p class="card-text">Student Count: 30</p>
+                            <ul class="class-options">
+                                <li class="class-option"><a href="#">Edit</a></li>
+                                <li class="class-option"><a href="#">See Report</a></li>
+                                <li class="class-option"><a href="#">Roster</a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card class-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grade 7 - Section A</h5>
+                            <p class="card-text">Student Count: 30</p>
+                            <ul class="class-options">
+                                <li class="class-option"><a href="#">Edit</a></li>
+                                <li class="class-option"><a href="#">See Report</a></li>
+                                <li class="class-option"><a href="#">Roster</a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card class-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grade 7 - Section A</h5>
+                            <p class="card-text">Student Count: 30</p>
+                            <ul class="class-options">
+                                <li class="class-option"><a href="#">Edit</a></li>
+                                <li class="class-option"><a href="#">See Report</a></li>
+                                <li class="class-option"><a href="#">Roster</a></li>
+                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add similar cards for other grades and sections -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Your existing footer code... -->
+     <!-- Footer -->
+     {% include 'footer.html' %}
+  
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<!-- profile.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{{ user.username }}</h2>
+    <p>{{ profile.bio }}</p>
+    <img src="{{ profile.profile_picture.url }}" alt="Profile Picture">
+    <!-- Add an edit button or form for users to update their profile -->
+{% endblock %}

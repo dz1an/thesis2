@@ -1,0 +1,17 @@
+<!-- smartscore/templates/search_exams.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search Results</h1>
+  
+  {% if exams %}
+    <ul>
+      {% for exam in exams %}
+        <li>{{ exam.title }} - {{ exam.description }}</li>
+        <!-- Add more information as needed -->
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No exams found.</p>
+  {% endif %}
+{% endblock %}

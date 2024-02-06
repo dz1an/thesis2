@@ -1,0 +1,108 @@
+<!-- home.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+     <!-- Include Bootstrap CSS -->
+     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css" />
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!-- Custom styles -->
+</head>
+</head>
+
+<body>
+    <!-- Include the contents of navbar.html -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <header class="container">
+        <div class="row">
+            <div class="col-md-6">
+               
+                <p class="intro-text">
+                    <h1 strong>Automated Exam System with QR Code-Based Answer Sheets</h1><br>
+                    Save time and effort with our automated test paper grading system. Simply scan answer sheets using a mobile device camera or PC web camera, and let the system process the scanned images.
+                </p>
+                <a href="#learn-more" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+            <div class="col-md-6">
+                {% block content %}
+    <img src="{% static 'images/sphinx.png' %}" alt="Sphinx Image">
+    
+             
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Content of home.html -->
+    <div class="container">
+        <!-- Main Content -->
+        <div class="content" id="learn-more">
+ <!-- Explore Our Features -->
+<h2>Explore Our Features</h2>
+
+<!-- Feature Boxes -->
+<div class="row">
+    <!-- Use Your Own Device -->
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+            <div class="feature-circle" style="background-color: black;"></div> <!-- Add this style -->
+            <h5>Use Your Own Device</h5>
+            <p>Sync between multiple devices. Android, iPhone, iPad, or PC/Laptop Web cameras can be used as scanners.</p>
+        </div>
+    </div>
+
+    <!-- Make Your Exam -->
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+            <div class="feature-circle" style="background-color: red;"></div> <!-- Add this style -->
+            <h5>Make Your Exam</h5>
+            <p>Allows users to create their own Multiple Choice Question (MCQ) exams with multiple features and tagging.</p>
+        </div>
+    </div>
+
+    <!-- Analytics -->
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+            <div class="feature-circle" style="background-color: blue;"></div> <!-- Add this style -->
+            <h5>Analytics</h5>
+            <p>Review results on the website. Item analysis and reports are provided. Data can be exported for further analysis.</p>
+        </div>
+    </div>
+
+    <!-- Information Management -->
+    <div class="col-md-6 col-lg-3">
+        <div class="feature-box">
+            <div class="feature-circle" style="background-color: green;"></div> <!-- Add this style -->
+            <h5>Information Management</h5>
+            <p>Manage student data, including classes, student exams data, and share exam data efficiently.</p>
+        </div>
+    </div>
+</div>
+
+
+
+            <!-- Add your home page content here -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Video Tutorial</h2>
+                <p>Watch our tutorial video to learn more about using the Automated Exam System:</p>
+                <!-- Replace 'YOUR_YOUTUBE_VIDEO_ID' with the actual video ID from your YouTube video -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xvFZjo5PgG0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    {% endblock %}  
+    <!-- Footer -->
+    {% include 'footer.html' %}
+</body>
+
+</html>
+
