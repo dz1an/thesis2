@@ -1,3 +1,4 @@
+from django.views.static import serve
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -16,6 +17,8 @@ urlpatterns = [
     path('students/', views.students, name='students'),
     path('contact/', views.contact, name='contact'),
     path('home/', views.home, name='home'),
-    path('logout/', LogoutView.as_view(), name='logout'),  # Use LogoutView here
-    # Add more URL patterns as needed
+    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('download-test-paper/', views.download_test_paper, name='download_test_paper'),
+    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),  
 ]
