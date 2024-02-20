@@ -5,6 +5,8 @@ from django.shortcuts import render, redirect
 from .forms import RegistrationFormWithTeacher
 from .models import Profile
 from django.contrib.auth.views import LogoutView
+from django.conf import settings
+from django.shortcuts import redirect
 
 
 def register(request):

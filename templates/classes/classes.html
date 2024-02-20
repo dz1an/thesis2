@@ -43,86 +43,28 @@
             <button class="btn btn-danger">Delete</button>
             <button class="btn btn-warning">Archive</button>
 
-            <h2>Class List</h2>
-            <div class="row">
-                <!-- Grade 7 Sections -->
-                <div class="col-md-4">
-                    <div class="card class-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Grade 7 - Section A</h5>
-                            <p class="card-text">Student Count: 30</p>
-                            <ul class="class-options">
-                                <li class="class-option"><a href="#">Edit</a></li>
-                                <li class="class-option"><a href="#">See Report</a></li>
-                                <li class="class-option"><a href="#">Roster</a></li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card class-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Grade 7 - Section A</h5>
-                            <p class="card-text">Student Count: 30</p>
-                            <ul class="class-options">
-                                <li class="class-option"><a href="#">Edit</a></li>
-                                <li class="class-option"><a href="#">See Report</a></li>
-                                <li class="class-option"><a href="#">Roster</a></li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card class-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Grade 7 - Section A</h5>
-                            <p class="card-text">Student Count: 30</p>
-                            <ul class="class-options">
-                                <li class="class-option"><a href="#">Edit</a></li>
-                                <li class="class-option"><a href="#">See Report</a></li>
-                                <li class="class-option"><a href="#">Roster</a></li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card class-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Grade 7 - Section A</h5>
-                            <p class="card-text">Student Count: 30</p>
-                            <ul class="class-options">
-                                <li class="class-option"><a href="#">Edit</a></li>
-                                <li class="class-option"><a href="#">See Report</a></li>
-                                <li class="class-option"><a href="#">Roster</a></li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card class-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Grade 7 - Section A</h5>
-                            <p class="card-text">Student Count: 30</p>
-                            <ul class="class-options">
-                                <li class="class-option"><a href="#">Edit</a></li>
-                                <li class="class-option"><a href="#">See Report</a></li>
-                                <li class="class-option"><a href="#">Roster</a></li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card class-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Grade 7 - Section A</h5>
-                            <p class="card-text">Student Count: 30</p>
-                            <ul class="class-options">
-                                <li class="class-option"><a href="#">Edit</a></li>
-                                <li class="class-option"><a href="#">See Report</a></li>
-                                <li class="class-option"><a href="#">Roster</a></li>
-                             
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add similar cards for other grades and sections -->
+            <!-- Class List -->
+<h2>Class List</h2>
+<div class="row">
+    {% for profile in profiles %}
+        <div class="col-md-4">
+            <div class="card class-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ profile.user.username }}</h5>
+                    <p class="card-text">{{ profile.bio }}</p>
+                    <!-- Add more fields as needed -->
 
+                    <ul class="class-options">
+                        <li class="class-option"><a href="#">Edit</a></li>
+                        <li class="class-option"><a href="#">See Report</a></li>
+                        <li class="class-option"><a href="#">Roster</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    {% endfor %}
+</div>
+
         </div>
     </div>
 
