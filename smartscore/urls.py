@@ -20,5 +20,6 @@ urlpatterns = [
     path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('download-test-paper/', views.download_test_paper, name='download_test_paper'),
-    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}),  
+    path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT}), 
+    path('scan/', views.scan, name='scan'), 
 ]

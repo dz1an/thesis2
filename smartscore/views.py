@@ -87,3 +87,7 @@ def download_test_paper(request):
     # Assuming 'images/test_paper.png' is the path to your static test paper file
     static_test_paper_path = 'images/test_paper.png'
     return redirect(f'{settings.STATIC_URL}{static_test_paper_path}')
+
+def scan(request):
+    # Your logic for the scan page goes here
+    return render(request, 'scan.html')
